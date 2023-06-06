@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import bottom_arr from "../../assets/img/icons/bottom-arr.png";
+import burger from "../../assets/img/icons/burger.png";
 
 import s from "./Header.module.scss";
 import { useRouter } from "next/router";
@@ -37,20 +38,7 @@ export const Header = () => {
               aria-label="Toggle navigation"
             >
               <span className="[&>svg]:w-5">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  className="h-7 w-7"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                  />
-                </svg>
+                <Image width={30} height={30} src={burger} alt="" />
               </span>
             </button>
           </div>
