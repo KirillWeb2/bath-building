@@ -3,6 +3,7 @@ import img1 from "../../assets/img/season_tickets/1.jpg";
 import img2 from "../../assets/img/season_tickets/2.jpg";
 import img3 from "../../assets/img/season_tickets/3.jpg";
 import { PriceItem } from "@/features/prices/PriceItem/PriceItem";
+import Head from "next/head";
 
 const list = [
   {
@@ -68,5 +69,12 @@ export default function Price() {
 
   if (!item) return null;
 
-  return <PriceItem item={item} />;
+  return (
+    <>
+      <Head>
+        <title>{item.text}</title>
+      </Head>
+      <PriceItem item={item} />
+    </>
+  );
 }

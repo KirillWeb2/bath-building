@@ -10,7 +10,7 @@ interface ModalProps {
 export const Modal: FC<ModalProps> = ({ hiddenModal, activeService }) => {
   return (
     <div
-      className="py-12 bg-[#374151e6] transition duration-150 ease-in-out z-10 fixed top-0 right-0 bottom-0 left-0"
+      className="py-12 overflow-y-scroll bg-[#374151e6] transition duration-150 ease-in-out z-10 fixed top-0 right-0 bottom-0 left-0"
       id="modal"
     >
       <div role="alert" className="container mx-auto w-11/12 md:w-2/3 max-w-2xl">

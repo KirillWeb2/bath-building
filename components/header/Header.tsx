@@ -13,132 +13,112 @@ export const Header = () => {
   const router = useRouter();
   const [isVisibleBurger, setIsVisibleBurger] = useState<boolean>(false);
 
+  const path = router.pathname;
+
   const toggleBurger = () => {
     setIsVisibleBurger(!isVisibleBurger);
   };
+
+  const activeStyle = `block py-2 pr-4 pl-3 text-white rounded bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:p-0 dark:text-white`;
+  const defStyle =
+    "block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-[#6c6c6c] lg:hover:bg-[#6c6c6c] lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-[#6c6c6c] dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700";
 
   if (router.pathname !== "/") return <DefaultHeader />;
 
   return (
     <header>
-      <nav
-        className="relative h-[56px] flex w-full items-center justify-between bg-white py-2 text-neutral-600 shadow-lg hover:text-neutral-700 focus:text-neutral-700 dark:bg-neutral-600 dark:text-neutral-200 md:flex-wrap md:justify-start"
-        data-te-navbar-ref
-      >
-        <div className="flex w-full flex-wrap items-center justify-between">
-          <div className="p-2 flex items-center">
+      <nav className="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-[#3e3e3e]">
+        <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+          <Link href="/" className="flex items-center">
+            <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
+              Тут логотип
+            </span>
+          </Link>
+          <div className="flex items-center lg:order-2">
             <button
               onClick={toggleBurger}
-              className="border-0 bg-transparent px-2 text-xl leading-none transition-shadow duration-150 ease-in-out text-white hover:text-gray-400 lg:hidden"
+              data-collapse-toggle="mobile-menu-2"
               type="button"
-              data-te-collapse-init
-              data-te-target="#navbarSupportedContentX"
-              aria-controls="navbarSupportedContentX"
+              className="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-[#6c6c6c] dark:focus:ring-gray-600"
+              aria-controls="mobile-menu-2"
               aria-expanded="false"
-              aria-label="Toggle navigation"
             >
-              <span className="[&>svg]:w-5">
-                <Image width={30} height={30} src={burger} alt="" />
-              </span>
+              {isVisibleBurger ? (
+                <svg
+                  className="w-6 h-6"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              ) : (
+                <svg
+                  className="w-6 h-6"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              )}
             </button>
           </div>
-
           <div
-            className="!visible hidden grow basis-[100%] items-center lg:!flex lg:basis-auto"
-            id="navbarSupportedContentX"
-            data-te-collapse-item
+            className={[
+              "justify-between items-center w-full lg:flex lg:w-auto lg:order-1",
+              isVisibleBurger ? "" : "hidden",
+            ].join(" ")}
+            id="mobile-menu-2"
           >
-            <ul
-              className="mr-auto flex flex-col lg:flex-row"
-              data-te-navbar-nav-ref
-            >
-              <li className="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref>
-                <a
-                  className="block transition duration-150 ease-in-out hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:hover:text-white dark:focus:text-white lg:p-2 [&.active]:text-black/90"
-                  href="#!"
-                  data-te-nav-link-ref
-                  data-te-ripple-init
-                  data-te-ripple-color="light"
+            <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+              <li>
+                <Link
+                  onClick={toggleBurger}
+                  href="/"
+                  className={path === "/" ? activeStyle : defStyle}
+                  aria-current="page"
                 >
                   Главная
-                </a>
+                </Link>
               </li>
-              <li className="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref>
+              <li>
                 <Link
-                  className="block transition duration-150 ease-in-out hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:hover:text-white dark:focus:text-white lg:p-2 [&.active]:text-black/90"
+                  onClick={toggleBurger}
                   href="/price"
-                  data-te-nav-link-ref
-                  data-te-ripple-init
-                  data-te-ripple-color="light"
+                  className={path === "/price" ? activeStyle : defStyle}
                 >
                   Цены и акции
                 </Link>
               </li>
-
-              <li className="mb-2 lg:mb-0 lg:pr-2" data-te-nav-item-ref>
+              <li>
                 <Link
-                  className="block transition duration-150 ease-in-out hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:hover:text-white dark:focus:text-white lg:p-2 [&.active]:text-black/90"
+                  onClick={toggleBurger}
+                  href="/#form"
+                  className={path === "/#form" ? activeStyle : defStyle}
+                >
+                  Обратная связь
+                </Link>
+              </li>
+              <li>
+                <Link
+                  onClick={toggleBurger}
                   href="/about"
-                  data-te-nav-link-ref
-                  data-te-ripple-init
-                  data-te-ripple-color="light"
+                  className={path === "/about" ? activeStyle : defStyle}
                 >
                   О нас
                 </Link>
               </li>
             </ul>
           </div>
-
-          {isVisibleBurger && (
-            <div
-              className="bg-neutral-600 z-10 grow basis-[100%] items-center lg:!flex lg:basis-auto"
-              id="navbarSupportedContentX"
-              data-te-collapse-item
-            >
-              <ul
-                className="py-3 mr-auto flex flex-col lg:flex-row"
-                data-te-navbar-nav-ref
-              >
-                <li className="py-3 px-3 lg:mb-0 lg:pr-2" data-te-nav-item-ref>
-                  <Link
-                    onClick={toggleBurger}
-                    className="block transition text-white hover:text-gray-400"
-                    href="/"
-                    data-te-nav-link-ref
-                    data-te-ripple-init
-                    data-te-ripple-color="light"
-                  >
-                    Главная
-                  </Link>
-                </li>
-                <li className="py-3 px-3 lg:mb-0 lg:pr-2" data-te-nav-item-ref>
-                  <Link
-                    onClick={toggleBurger}
-                    className="block transition text-white hover:text-gray-400"
-                    href="/price"
-                    data-te-nav-link-ref
-                    data-te-ripple-init
-                    data-te-ripple-color="light"
-                  >
-                    Цены и акции
-                  </Link>
-                </li>
-
-                <li className="py-3 px-3 lg:mb-0 lg:pr-2" data-te-nav-item-ref>
-                  <Link
-                    onClick={toggleBurger}
-                    className="block transition text-white hover:text-gray-400"
-                    href="/about"
-                    data-te-nav-link-ref
-                    data-te-ripple-init
-                    data-te-ripple-color="light"
-                  >
-                    О нас
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          )}
         </div>
       </nav>
 
