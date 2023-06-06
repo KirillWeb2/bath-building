@@ -140,7 +140,7 @@ export const Header = () => {
           <div className="flex h-full items-center justify-center">
             <div className="px-6 text-center text-white md:px-12">
               <h1 className="mb-6 text-6xl font-bold">
-                Банный комплекс &laquo;Любава Ико&raquo;
+                Банный комплекс &laquo;Любава и К&raquo;
               </h1>
               <h3 className="mb-8 text-2xl font-normal">
                 Окунитесь в атмосферу отдыха и релакса, не выезжая из города.
