@@ -26,6 +26,12 @@ export const Form = () => {
     try {
       setIsLoading(true);
       await axios.post("/api/send", form).then((res) => {
+        setForm({
+          message: "",
+          name: "",
+          phone: "",
+        });
+
         setIsLoading(false);
         setIsSuccess(true);
 
