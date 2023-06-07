@@ -34,6 +34,7 @@ export const Header = () => {
             <Image src={logo} alt="" />
           </Navbar.Brand>
           <Navbar.Toggle
+            style={{ backgroundColor: "#fff" }}
             className={s.burger}
             aria-controls="basic-navbar-nav"
           />
