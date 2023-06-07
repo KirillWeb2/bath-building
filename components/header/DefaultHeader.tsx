@@ -26,7 +26,7 @@ export const DefaultHeader = () => {
 
   return (
     <header>
-      <Navbar className="bg-[#3e3e3e]" expand="lg">
+      <Navbar expanded className="bg-[#3e3e3e]" expand="lg">
         <Container>
           <Navbar.Brand className={s.logo} href="/">
             <Image src={logo} alt="" />
@@ -35,32 +35,41 @@ export const DefaultHeader = () => {
             style={{ backgroundColor: "#fff" }}
             className={s.burger}
             aria-controls="basic-navbar-nav"
+            onClick={toggleBurger}
           />
-          <Navbar.Collapse id="basic-navbar-nav">
+          <Navbar.Collapse hidden={!isVisibleBurger} id="basic-navbar-nav">
             <Nav className="me-auto ">
-              <Link className={"text-white px-3 py-3 text-[18px]"} href="/">
+              <Link
+                className={"text-white px-3 py-3 text-[18px]"}
+                onClick={toggleBurger}
+                href="/"
+              >
                 Главная
               </Link>
               <Link
                 className={"text-white px-3 py-3 text-[18px]"}
+                onClick={toggleBurger}
                 href="/price"
               >
                 Цены и акции
               </Link>
               <Link
                 className={"text-white px-3 py-3 text-[18px]"}
+                onClick={toggleBurger}
                 href="/#form"
               >
                 Обратная связь
               </Link>
               <Link
                 className={"text-white px-3 py-3 text-[18px]"}
+                onClick={toggleBurger}
                 href="/contacts"
               >
                 Контакты
               </Link>
               <Link
                 className={"text-white px-3 py-3 text-[18px]"}
+                onClick={toggleBurger}
                 href="/about"
               >
                 О нас
