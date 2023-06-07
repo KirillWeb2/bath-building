@@ -11,16 +11,10 @@ export const Contacts = () => {
           </p>
           <div>
             <p className="mb-[8px] text-2xl font-normal text-center">
-              Тел:+7 (495) 125-12-58
+              Тел:+7 (928) 770-02-51
             </p>
             <p className="mb-[8px] text-2xl font-normal text-center">
-              795180, Кемеровская область,
-            </p>
-            <p className="mb-[8px] text-2xl font-normal text-center">
-              город Егорьевск, проезд Космонавтов, 65
-            </p>
-            <p className="mb-[8px] text-2xl font-normal text-center">
-              ТРЦ «БМП», 2 этаж, вход 11
+              ул. Можайского, 48А, Батайск
             </p>
             <p className="mb-[8px] text-2xl font-normal text-center">
               Режим работы
@@ -54,7 +48,7 @@ export const Contacts = () => {
               </Link>
             </div>
             <div className="bg-[#3e3e3e] p-4 rounded-2xl">
-              <Link href="https://t.me/lubavaortosalon">
+              <Link href="https://t.me/ugoryilubava">
                 <svg
                   className="h-8 w-8 text-white cursor-pointer duration-300 transition-all hover:text-gray-500"
                   width="24"
@@ -72,7 +66,7 @@ export const Contacts = () => {
               </Link>
             </div>
             <div className="bg-[#3e3e3e] p-4 rounded-2xl">
-              <a href="tel:+74951201058">
+              <a href="tel:+79287700251">
                 <svg
                   className="h-8 w-8 text-white cursor-pointer duration-300 transition-all hover:text-gray-500"
                   width="24"
