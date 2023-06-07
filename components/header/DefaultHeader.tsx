@@ -28,11 +28,12 @@ export const DefaultHeader = () => {
     <header>
       <Navbar className="bg-[#3e3e3e]" expand="lg">
         <Container>
-          <Navbar.Brand href="/">
-            <Image className={s.logo} src={logo} alt="" />
+          <Navbar.Brand className={s.logo} href="/">
+            <Image src={logo} alt="" />
           </Navbar.Brand>
           <Navbar.Toggle
-            className="bg-white"
+            style={{ backgroundColor: "#fff" }}
+            className={s.burger}
             aria-controls="basic-navbar-nav"
           />
           <Navbar.Collapse id="basic-navbar-nav">
