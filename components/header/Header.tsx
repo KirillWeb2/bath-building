@@ -1,13 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
-
-import bottom_arr from "../../assets/img/icons/bottom-arr.png";
-import burger from "../../assets/img/icons/burger.png";
-
-import s from "./Header.module.scss";
 import { useRouter } from "next/router";
 import { DefaultHeader } from "./DefaultHeader";
 import { useState } from "react";
+
+import bottom_arr from "../../assets/img/icons/bottom-arr.png";
+import logo from "../../assets/img/icons/logo.svg";
+
+import s from "./Header.module.scss";
 
 export const Header = () => {
   const router = useRouter();
@@ -27,19 +27,19 @@ export const Header = () => {
 
   return (
     <header>
-      <nav className="bg-white h-[56px] border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-[#3e3e3e]">
-        <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+      <nav className="bg-white h-[60px] z-20 border-gray-200 dark:bg-[#3e3e3e]">
+        <div className="flex flex-wrap justify-between h-[60px] items-center mx-auto max-w-screen-xl">
           <Link href="/" className="flex items-center">
-            <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
-              Тут логотип
+            <span className="z-30 pl-4 self-center text-xl font-semibold whitespace-nowrap dark:text-white">
+              <Image className={s.icon} src={logo} alt="" />
             </span>
           </Link>
-          <div className="flex items-center lg:order-2">
+          <div className="z-30 flex items-center lg:order-2">
             <button
               onClick={toggleBurger}
               data-collapse-toggle="mobile-menu-2"
               type="button"
-              className="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-[#6c6c6c] dark:focus:ring-gray-600"
+              className="inline-flex items-center mr-4 p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-[#6c6c6c] dark:focus:ring-gray-600"
               aria-controls="mobile-menu-2"
               aria-expanded="false"
             >
@@ -74,12 +74,12 @@ export const Header = () => {
           </div>
           <div
             className={[
-              "justify-between items-center w-full lg:flex lg:w-auto lg:order-1",
+              "justify-between absolute top-[60px] bg-[#3e3e3e] z-10 items-center w-full lg:top-[auto] lg:relative lg:flex lg:w-auto lg:order-1",
               isVisibleBurger ? "" : "hidden",
             ].join(" ")}
             id="mobile-menu-2"
           >
-            <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+            <ul className="flex flex-col font-medium lg:flex-row lg:space-x-8 lg:mt-0">
               <li>
                 <Link
                   onClick={toggleBurger}
@@ -106,6 +106,15 @@ export const Header = () => {
                   className={path === "/#form" ? activeStyle : defStyle}
                 >
                   Обратная связь
+                </Link>
+              </li>
+              <li>
+                <Link
+                  onClick={toggleBurger}
+                  href="/contacts"
+                  className={path === "/contacts" ? activeStyle : defStyle}
+                >
+                  Контакты
                 </Link>
               </li>
               <li>

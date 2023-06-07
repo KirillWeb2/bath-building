@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import logo from "../../assets/img/icons/logo.svg";
+
 export const Footer = () => {
   return (
     <footer style={{ background: "#3e3e3e" }}>
@@ -8,14 +10,14 @@ export const Footer = () => {
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
             <Link href="./" className="flex items-center">
-              <div className="text-white text-2xl font-bold">Тут логотип</div>
+              <Image className="h-[50px] w-[100%]" src={logo} alt="" />
             </Link>
           </div>
         </div>
         <hr className="my-6 border-gray-200 sm:mx-auto dark:border-white lg:my-8" />
         <div className="sm:flex sm:items-center sm:justify-between">
           <span className="text-sm text-white sm:text-center ">
-            © 2023 Без имени
+            © 2023 DaulbaevDm
           </span>
           <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
             <a
