@@ -30,17 +30,42 @@ export const Header = () => {
     <header>
       <Navbar className="bg-[#3e3e3e]" expand="lg">
         <Container>
-          <Navbar.Brand href="/">
-            <Image className={s.logo} src={logo} alt="" />
+          <Navbar.Brand className={s.logo} href="/">
+            <Image src={logo} alt="" />
           </Navbar.Brand>
-          <Navbar.Toggle className="bg-white" aria-controls="basic-navbar-nav" />
+          <Navbar.Toggle
+            className={s.burger}
+            aria-controls="basic-navbar-nav"
+          />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto ">
-              <Link className={"text-white px-3 py-3 text-[18px]"} href="/">Главная</Link>
-              <Link className={"text-white px-3 py-3 text-[18px]"} href="/price">Цены и акции</Link>
-              <Link className={"text-white px-3 py-3 text-[18px]"} href="/#form">Обратная связь</Link>
-              <Link className={"text-white px-3 py-3 text-[18px]"} href="/contacts">Контакты</Link>
-              <Link className={"text-white px-3 py-3 text-[18px]"} href="/about">О нас</Link>
+              <Link className={"text-white px-3 py-3 text-[18px]"} href="/">
+                Главная
+              </Link>
+              <Link
+                className={"text-white px-3 py-3 text-[18px]"}
+                href="/price"
+              >
+                Цены и акции
+              </Link>
+              <Link
+                className={"text-white px-3 py-3 text-[18px]"}
+                href="/#form"
+              >
+                Обратная связь
+              </Link>
+              <Link
+                className={"text-white px-3 py-3 text-[18px]"}
+                href="/contacts"
+              >
+                Контакты
+              </Link>
+              <Link
+                className={"text-white px-3 py-3 text-[18px]"}
+                href="/about"
+              >
+                О нас
+              </Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
