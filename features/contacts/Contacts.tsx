@@ -54,7 +54,7 @@ export const Contacts = () => {
               </Link>
             </div>
             <div className="bg-[#3e3e3e] p-4 rounded-2xl">
-              <Link href="https://telegram.org/">
+              <Link href="https://t.me/lubavaortosalon">
                 <svg
                   className="h-8 w-8 text-white cursor-pointer duration-300 transition-all hover:text-gray-500"
                   width="24"
