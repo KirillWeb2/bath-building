@@ -4,7 +4,7 @@ import s from "./Contacts.module.scss";
 export const Contacts = () => {
   return (
     <div className={s.bg}>
-      <div className="mx-auto max-w-screen-xl min-h-screen">
+      <div className="px-[8px] mx-auto max-w-screen-xl min-h-screen">
         <div className="py-[30px] flex flex-col items-center justify-center min-h-[100vh] w-[100%]">
           <p className="mb-[30px] text-4xl font-bold text-center">
             Ждём Вас в &quot;Любава и К&quot;!
