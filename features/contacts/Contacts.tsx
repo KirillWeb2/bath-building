@@ -14,20 +14,76 @@ export const Contacts = () => {
               Тел:+7 (928) 770-02-51
             </p>
             <p className="mb-[8px] text-2xl font-normal text-center">
-              ул. Можайского, 48А, Батайск
+              с. Новоникольск, ул. Советская. д. 3 Д
             </p>
             <p className="mb-[8px] text-2xl font-normal text-center">
               Режим работы
             </p>
-            <p className="mb-[8px] text-2xl font-normal text-center">
-              Понедельник-Воскресенье
-            </p>
-            <p className="mb-[8px] text-2xl font-normal text-center">
-              с 9:00 до 24:00
-            </p>
-            <p className="mb-[8px] text-2xl font-normal text-center">
-              Вход открыт до 22:00
-            </p>
+            <div className="overflow-x-scroll">
+              <table className=" min-w-full text-left text-lg font-light">
+                <thead className="border-b font-medium dark:border-neutral-500">
+                
+                </thead>
+                <tbody>
+                  <tr className="border-b dark:border-neutral-500">
+                    <td className={"whitespace-nowrap px-6 py-4 font-medium"}>
+                      Понедельник
+                    </td>
+                    <td className={"whitespace-nowrap px-6 py-4 font-medium"}>
+                      12.00-00.00
+                    </td>
+                  </tr>
+                  <tr className="border-b dark:border-neutral-500">
+                    <td className={"whitespace-nowrap px-6 py-4 font-medium"}>
+                      Вторник
+                    </td>
+                    <td className={"whitespace-nowrap px-6 py-4 font-medium"}>
+                      12.00-00.00
+                    </td>
+                  </tr>
+                  <tr className="border-b dark:border-neutral-500">
+                    <td className={"whitespace-nowrap px-6 py-4 font-medium"}>
+                      Среда
+                    </td>
+                    <td className={"whitespace-nowrap px-6 py-4 font-medium"}>
+                      12.00-00.00
+                    </td>
+                  </tr>
+                  <tr className="border-b dark:border-neutral-500">
+                    <td className={"whitespace-nowrap px-6 py-4 font-medium"}>
+                      Четверг
+                    </td>
+                    <td className={"whitespace-nowrap px-6 py-4 font-medium"}>
+                      12.00-00.00
+                    </td>
+                  </tr>
+                  <tr className="border-b dark:border-neutral-500">
+                    <td className={"whitespace-nowrap px-6 py-4 font-medium"}>
+                      Воскресенье
+                    </td>
+                    <td className={"whitespace-nowrap px-6 py-4 font-medium"}>
+                      12.00-00.00
+                    </td>
+                  </tr>
+                  <tr className="border-b dark:border-neutral-500">
+                    <td className={"whitespace-nowrap px-6 py-4 font-medium"}>
+                      Пятница
+                    </td>
+                    <td className={"whitespace-nowrap px-6 py-4 font-medium"}>
+                      12.00-01.00
+                    </td>
+                  </tr>
+                  <tr className="border-b dark:border-neutral-500">
+                    <td className={"whitespace-nowrap px-6 py-4 font-medium"}>
+                      Суббота
+                    </td>
+                    <td className={"whitespace-nowrap px-6 py-4 font-medium"}>
+                      12.00-01.00
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
           <div className="flex items-center gap-[10px] mt-[30px]">
             <div className="bg-[#3e3e3e] p-4 rounded-2xl">
