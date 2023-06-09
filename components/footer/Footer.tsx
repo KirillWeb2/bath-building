@@ -21,7 +21,7 @@ export const Footer = () => {
           </span>
           <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
             <a
-              href="https://t.me/ugoryilubava"
+              href="https://telegram.org/"
               className="text-white hover:text-gray-900 dark:hover:text-gray-300"
             >
               <svg
