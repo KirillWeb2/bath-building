@@ -86,41 +86,8 @@ export const Contacts = () => {
             </div>
           </div>
           <div className="flex items-center gap-[10px] mt-[30px]">
-            <div className="bg-[#3e3e3e] p-4 rounded-2xl">
-              <Link href="https://www.instagram.com/">
-                <svg
-                  className="h-8 w-8 text-white cursor-pointer duration-300 transition-all hover:text-gray-500"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />{" "}
-                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />{" "}
-                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
-                </svg>
-              </Link>
-            </div>
-            <div className="bg-[#3e3e3e] p-4 rounded-2xl">
-              <Link href="https://telegram.org/">
-                <svg
-                  className="h-8 w-8 text-white cursor-pointer duration-300 transition-all hover:text-gray-500"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                  stroke="currentColor"
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path stroke="none" d="M0 0h24v24H0z" />{" "}
-                  <path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4" />
-                </svg>
-              </Link>
-            </div>
+           
+           
             <div className="bg-[#3e3e3e] p-4 rounded-2xl">
               <a href="tel:+79287700251">
                 <svg
