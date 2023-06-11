@@ -14,7 +14,7 @@ export const Contacts = () => {
               Тел:+7 (928) 770-02-51
             </p>
             <p className="mb-[8px] text-2xl font-normal text-center">
-              с. Новоникольск, ул. Советская. д. 3 Д
+              с. Новоникольск, ул. Советская, д. 199
             </p>
             <p className="mb-[8px] text-2xl font-normal text-center">
               Режим работы
